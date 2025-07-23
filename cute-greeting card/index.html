@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You are the Best</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe0f0, #cceeff);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .greeting {
+      text-align: center;
+      background-color: white;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: popIn 1s ease-out;
+    }
+
+    .greeting h1 {
+      font-size: 3rem;
+      color: #ff4da6;
+      margin-bottom: 10px;
+    }
+
+    .hearts {
+      font-size: 2rem;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.3);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff80bf;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff4da6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="greeting">
+    <h1 id="message">You are the Best 💖</h1>
+    <div class="hearts">💗💞💕</div>
+    <button onclick="changeMessage()">Click for More Love</button>
+  </div>
+
+  <script>
+    const messages = [
+      "You are the Best 💖",
+      "You're Amazing! 🌟",
+      "Sending You Hugs 🧸",
+      "Stay Awesome! ✨",
+      "You're a Star 🌈"
+    ];
+
+    let index = 0;
+    function changeMessage() {
+      index = (index + 1) % messages.length;
+      document.getElementById("message").textContent = messages[index];
+    }
+  </script>
+
+</body>
+</html>
