@@ -37,7 +37,7 @@ Each project focuses on a specific concept like event handling, DOM manipulation
 
 To run a project:
 
-1. Clone this repository or download the ZIP file  
+1. Clone this repository 
 2. Open any project folder  
 3. Launch the `index.html` file in your browser  
 
